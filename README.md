@@ -58,5 +58,6 @@ The system allows administrators and lecturers to manage student records efficie
 
 ## Author
 ⁠Mutawakil Mariam Tungteiya
+
 BSc Electrical & Electronic Engineering  
 Accra Technical University
