@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.mimi.sms.ui.AdminController">
+
+    <!-- Gradient Background -->
+    <Pane style="-fx-background-color: linear-gradient(to bottom right, #e0e0e0, #bdbdbd);"/>
+
+    <!-- Main Content -->
+    <VBox alignment="CENTER" spacing="30">
+
+        <Label text="ACCRA TECHNICAL UNIVERSITY"
+               style="-fx-text-fill: blue;
+                      -fx-font-size: 36px;
+                      -fx-font-weight: bold;"/>
+
+        <Separator prefWidth="500" style="-fx-background-color: white;"/>
+
+        <HBox spacing="40" alignment="CENTER">
+
+            <!-- Student Records Card -->
+            <Button text="📁 Student Records"
+                    onAction="#loadStudentRecords"
+                    prefWidth="250"
+                    prefHeight="120"
+                    style="-fx-background-radius: 20;
+                           -fx-background-color: #28A745;
+                           -fx-text-fill: white;
+                           -fx-font-size: 16px;
+                           -fx-border-color: white;
+                           -fx-border-radius: 20;"/>
+
+            <!-- System Settings Card -->
+            <Button fx:id="systemSettingsButton"
+                    text="⚙ System Settings"
+                    onAction="#loadSystemSettings"
+                    prefWidth="250"
+                    prefHeight="120"
+                    style="-fx-background-radius: 20;
+                           -fx-background-color: #28A745;
+                           -fx-text-fill: white;
+                           -fx-font-size: 16px;
+                           -fx-border-color: white;
+                           -fx-border-radius: 20;"/>
+
+        </HBox>
+
+        <HBox alignment="BOTTOM_RIGHT"
+              style="-fx-padding: 20;">
+
+            <Button text="Logout"
+                    onAction="#handleLogout"
+                    style="-fx-background-color: #333;
+                   -fx-text-fill: white;
+                   -fx-font-weight: bold;
+                   -fx-padding: 8 20 8 20;
+                   -fx-background-radius: 8;"/>
+        </HBox>
+
+    </VBox>
+
+</StackPane>

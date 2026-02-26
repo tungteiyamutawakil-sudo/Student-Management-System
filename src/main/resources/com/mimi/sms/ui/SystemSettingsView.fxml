@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.mimi.sms.ui.SettingsController"
+           style="-fx-background-color: linear-gradient(to bottom right, #b31217, #8e0e00);">
+
+    <VBox spacing="30" alignment="CENTER"
+          style="-fx-background-color: white;
+                 -fx-background-radius: 20;
+                 -fx-padding: 50;
+                 -fx-effect: drop shadow(gaussian, rgba(0,0,0,0.25), 20, 0, 0, 8);">
+
+        <Label text="System Settings"
+               style="-fx-font-size: 26px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #333;"/>
+
+        <HBox spacing="25" alignment="CENTER">
+
+            <Button text="Add Student"
+                    style="-fx-background-color: #28a745;
+                           -fx-text-fill: white;
+                           -fx-font-weight: bold;
+                           -fx-padding: 12 25 12 25;
+                           -fx-background-radius: 8;"/>
+
+            <Button text="Edit Student"
+                    style="-fx-background-color: #ffc107;
+                           -fx-text-fill: black;
+                           -fx-font-weight: bold;
+                           -fx-padding: 12 25 12 25;
+                           -fx-background-radius: 8;"/>
+
+            <Button text="Delete Student"
+                    style="-fx-background-color: #dc3545;
+                           -fx-text-fill: white;
+                           -fx-font-weight: bold;
+                           -fx-padding: 12 25 12 25;
+                           -fx-background-radius: 8;"/>
+
+        </HBox>
+
+    </VBox>
+</StackPane>

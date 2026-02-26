@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mimi.sms.ui.StudentRecordsController">
+
+    <!-- ===== TITLE BAR ===== -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT"
+              style="-fx-padding: 15; -fx-background-color: #f4f6f9;">
+
+            <Label text="Student Records"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Reports" onAction="#openReports"/>
+            <Button text="Dashboard" onAction="#openDashboard"/>
+
+        </HBox>
+    </top>
+
+    <!-- ===== TABLE SECTION ===== -->
+    <center>
+        <VBox spacing="10" style="-fx-background-color: #f4f6f9;">
+            <padding>
+                <Insets top="15" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <TableView fx:id="studentsTable" prefHeight="600">
+
+                <columns>
+                    <TableColumn fx:id="idColumn" text="Student ID" prefWidth="110"/>
+                    <TableColumn fx:id="nameColumn" text="Full Name" prefWidth="160"/>
+                    <TableColumn fx:id="programmeColumn" text="Programme" prefWidth="120"/>
+                    <TableColumn fx:id="levelColumn" text="Level"/>
+                    <TableColumn fx:id="gpaColumn" text="GPA" prefWidth="160"/>
+                    <TableColumn fx:id="emailColumn" text="Email" prefWidth="160"/>
+                    <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="120"/>
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="100"/>
+                </columns>
+
+            </TableView>
+
+        </VBox>
+    </center>
+
+</BorderPane>

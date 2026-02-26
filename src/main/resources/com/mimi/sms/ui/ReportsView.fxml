@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mimi.sms.ui.ReportsController">
+
+    <!-- TOP SECTION -->
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <ComboBox fx:id="reportTypeBox" promptText="Select Report Type"/>
+            <TextField fx:id="thresholdField" promptText="GPA Threshold (Optional)"/>
+            <Button text="Generate" onAction="#handleGenerate"/>
+            <Button text="Export CSV" onAction="#handleExport"/>
+        </HBox>
+    </top>
+
+    <!-- TABLE SECTION -->
+    <center>
+        <TableView fx:id="reportTable">
+            <columns>
+                <TableColumn fx:id="col1" text="Column 1" prefWidth="200"/>
+                <TableColumn fx:id="col2" text="Column 2" prefWidth="200"/>
+                <TableColumn fx:id="col3" text="Column 3" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>

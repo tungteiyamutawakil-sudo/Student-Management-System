@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mimi.sms.ui.StudentsController">
+
+    <top>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <TextField fx:id="searchField" promptText="Search by ID or Name"/>
+            <ComboBox fx:id="programmeFilter" promptText="Programme"/>
+            <ComboBox fx:id="levelFilter" promptText="Level"/>
+            <ComboBox fx:id="statusFilter" promptText="Status"/>
+            <Button text="Reset" onAction="#handleReset"/>
+        </HBox>
+    </top>
+
+    <!-- ================= CENTER (TABLE) ================= -->
+    <center>
+        <TableView fx:id="studentsTable" prefHeight="500">
+            <columns>
+                <TableColumn fx:id="idColumn" text="Student ID" prefWidth="100"/>
+                <TableColumn fx:id="nameColumn" text="Full Name" prefWidth="150"/>
+                <TableColumn fx:id="programmeColumn" text="Programme" prefWidth="120"/>
+                <TableColumn fx:id="levelColumn" text="Level"/>
+                <TableColumn fx:id="gpaColumn" text="GPA" prefWidth="160"/>
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="160"/>
+                <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="120"/>
+                <TableColumn fx:id="statusColumn" text="Status" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- ================= BOTTOM (ACTIONS) ================= -->
+    <bottom>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <!-- IMPORTANT: fx:id added for role-based control -->
+            <Button fx:id="addButton" text="Add" onAction="#handleAdd"/>
+            <Button fx:id="editButton" text="Edit" onAction="#handleEdit"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete"/>
+
+            <Separator orientation="VERTICAL"/>
+
+            <Button text="Sort by GPA" onAction="#handleSortGpa"/>
+            <Button text="Sort by Name" onAction="#handleSortName"/>
+
+            <Separator orientation="VERTICAL"/>
+
+            <Button text="Reports" onAction="#openReports"/>
+            <Button text="Dashboard" onAction="#openDashboard"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

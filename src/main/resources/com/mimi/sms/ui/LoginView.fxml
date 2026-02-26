@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.mimi.sms.ui.LoginController"
+           style="-fx-background-color: linear-gradient(to bottom right, #ff7e5f, #feb47b);">
+
+    <!-- Card Container -->
+    <VBox spacing="20"
+          alignment="CENTER"
+          maxWidth="350"
+          style="-fx-background-color: gray;
+                 -fx-background-radius: 15;
+                 -fx-padding: 30;
+                 -fx-effect: drop shadow(gaussian, rgba(0,0,0,0.3), 20, 0.3, 0, 8);">
+
+        <!-- University Title -->
+        <Label text="ACCRA TECHNICAL UNIVERSITY"
+               wrapText="true"
+               maxWidth="420"
+               alignment="CENTER"
+               textAlignment="CENTER"
+               style="-fx-font-size: 20px;
+              -fx-font-weight: bold;
+              -fx-text-fill: #002147;"/>
+
+        <Label text="Student Management System"
+               style="-fx-font-size: 14px;
+                      -fx-text-fill: #002147;"/>
+
+        <!-- Username -->
+        <TextField fx:id="usernameField"
+                   promptText="Username"
+                   style="-fx-pref-height: 35;
+                          -fx-background-radius: 8;"/>
+
+        <!-- Password -->
+        <PasswordField fx:id="passwordField"
+                       promptText="Password"
+                       style="-fx-pref-height: 35;
+                              -fx-background-radius: 8;"/>
+
+        <!-- Login Button -->
+        <Button text="Login"
+                onAction="#handleLogin"
+                style="-fx-background-color: #002147;
+                       -fx-text-fill: white;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 8;
+                       -fx-pref-height: 35;
+                       -fx-pref-width: 200;"/>
+
+    </VBox>
+
+</StackPane>

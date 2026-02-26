@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mimi.sms.ui.DashboardController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Dashboard"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+    <Button text="Refresh"
+            onAction="#handleRefresh"
+            style="-fx-background-color: #2ecc71; -fx-text-fill: white;"/>
+
+    <GridPane hgap="20" vgap="15">
+
+        <Label text="Total Students:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="totalLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Average GPA:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="averageGpaLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Active Students:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="activeLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Inactive Students:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="inactiveLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    </GridPane>
+
+    <Separator/>
+
+    <HBox spacing="40">
+
+        <VBox spacing="10">
+            <Label text="Top 5 Students (By GPA)"
+                   style="-fx-font-weight: bold;"/>
+            <ListView fx:id="topStudentsList" prefWidth="250" prefHeight="200"/>
+        </VBox>
+
+        <BarChart fx:id="gpaChart" prefWidth="500" prefHeight="300">
+            <xAxis>
+                <CategoryAxis label="Student"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="GPA" upperBound="5.0" tickUnit="1.0"/>
+            </yAxis>
+        </BarChart>
+        <VBox spacing="10">
+            <Label text="Programme Distribution"
+                   style="-fx-font-weight: bold;"/>
+            <PieChart fx:id="programmeChart"
+                      prefWidth="300"
+                      prefHeight="300"/>
+        </VBox>
+
+    </HBox>
+
+</VBox>
